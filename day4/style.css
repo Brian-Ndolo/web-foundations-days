@@ -1,0 +1,127 @@
+/* CSS Variables */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --card-color: #ffffff;
+    --border-color: #ccc;
+    --button-bg: #333;
+    --button-text: #ffffff;
+}
+
+/* Dark Theme Variables */
+body.dark {
+    --bg-color: #222;
+    --text-color: #f4f4f4;
+    --card-color: #333;
+    --border-color: #555;
+    --button-bg: #f4f4f4;
+    --button-text: #222;
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Main Content */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+/* Card */
+section {
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    font: inherit;
+    resize: vertical;
+}
+
+/* Counters */
+#char-count,
+#word-count {
+    margin: 8px 0;
+}
+
+/* Warning and Over Classes */
+.warning {
+    color: orange;
+}
+
+.over {
+    color: red;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    padding: 10px 18px;
+    margin-top: 15px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    main {
+        padding: 0 15px 30px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+}

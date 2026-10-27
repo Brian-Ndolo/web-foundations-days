@@ -1,0 +1,7 @@
+ Day 8 Reflection
+
+The most difficult concept in this course was designing a system that remains reliable when many users make requests at the same time. I learned that scaling an application is not just about adding more servers. The system must also protect data consistency, manage database contention, handle failures, and maintain a good user experience. In TicketHub, the biggest challenge was preventing two customers from purchasing the same seat during a popular ticket sale. I addressed this by using database transactions, row locking, temporary seat holds, and idempotent payment processing. Breaking the problem into smaller steps helped me understand how these mechanisms work together.
+
+For my capstone, I would improve the explanation of how the architecture handles high traffic and failures. I would make the request flow clearer, identify possible bottlenecks, and explain how the database, cache, and background workers interact. I would use the feedback I received to prioritize the changes and demonstrate how each improvement addresses a specific concern. This would make the design easier to understand and evaluate.
+
+Next, I want to learn more about PostgreSQL transactions and isolation levels, Redis caching, message queues, and load testing. I also want to practise implementing these concepts in a working application rather than only documenting them. My goal is to become better at designing systems that are scalable, secure, reliable, and practical for real users.
